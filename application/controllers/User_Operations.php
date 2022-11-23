@@ -78,9 +78,6 @@ class User_operations extends CI_Controller {
                         "type"      => "success"
                     );
 
-
-
-
                     /* ***** Remember Me : Begin ***** */
                     if ($this->input->post("remember_me") == "on"){
                         $remember_me = array(
@@ -93,9 +90,6 @@ class User_operations extends CI_Controller {
                         delete_cookie("remember_me");
                     }
                     /* ***** Remember Me : End ***** */
-
-
-
 
                     $this->session->set_flashdata("alert", $alert);
                     redirect(base_url("user_operations/profile/$user->id"));
